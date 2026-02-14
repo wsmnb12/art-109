@@ -1,0 +1,121 @@
+/* CSS resets */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* respect user size font size preferences */
+html {
+    font-size: 100%;
+}
+
+
+/* General CSS */
+body {
+    background-color: #17bbe4;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+header {
+    padding: 6rem;
+    /* background-color: #ffffff; */
+    background: #3e38ab;
+    background: linear-gradient(350deg, rgba(62, 56, 171, 1) 0%, rgba(43, 43, 171, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    margin-bottom: 3rem;
+    text-align: center;
+    border-bottom: #000 1px solid;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+nav{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+nav a{
+    text-decoration: none;
+    color:#000;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+main {}
+
+.about-section,
+.portfolio-section,
+.contact-section {
+    margin-bottom: 4rem;
+}
+
+.about-content,
+.portfolio-content,
+.contact-content {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.about-content h2,
+.portfolio-content h2,
+.contact-content h2 {
+    padding: 2rem 0;
+
+}
+
+.portfolio-item {
+    margin-bottom: 5rem;
+    background-color: white;
+    padding: 4rem;
+    text-align: center;
+    border: 2px #000 solid;
+    border-radius: .5rem;
+
+
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 0.5rem;
+    box-shadow: #000 3px 2px 8px;
+}
+
+.portfolio-item h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-item p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.about-section {
+    background-color: #17bbe4;
+}
+
+.portfolio-section {
+    background-color: #17bbe4;
+    padding: 2rem;
+}
+
+footer {
+    text-align: left;
+    color:#e0e0d1;
+    padding: 1rem;
+    background: #3e38ab;
+    background: linear-gradient(350deg, rgba(62, 56, 171, 1) 0%, rgba(43, 43, 171, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    border-top: #000 1px solid;
+}
+
+footer p {
+    font-size: 1rem;
+}
