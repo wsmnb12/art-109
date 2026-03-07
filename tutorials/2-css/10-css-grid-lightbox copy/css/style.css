@@ -180,6 +180,11 @@ nav a {
     padding: 2rem;
 }
 
+.resume-link a {
+    text-decoration: underline;
+    color: var(--accent-1);
+}
+
 
 .about h2,
 .portfolio h2,
