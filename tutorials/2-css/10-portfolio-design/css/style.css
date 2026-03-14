@@ -59,8 +59,8 @@ header {
 }
 
 header h1 {
-    text-shadow: -5px 5px 0px #ffffff,
-        -10px 10px 0px #9af043,
+    text-shadow: -5px 5px 0px #f00606,
+        -10px 10px 0px #3604ff,
         -15px 15px 0px #ffffff,
         6px -7px 7px rgba(206, 89, 55, 0);
 }
