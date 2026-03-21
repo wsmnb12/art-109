@@ -1,0 +1,132 @@
+body {
+    animation: change-color 3s infinite alternate;
+    background-color: black;
+    color: white;
+}
+
+@keyframes change-color {
+    0% {
+        background-color: black;
+        color: white;
+    }
+    50% {
+        background-color: gray;
+        color: white;
+    }
+    100% {
+        background-color: white;
+        color: black;
+    }
+}
+
+
+.title{
+    font-family: fantasy;
+    text-align: center;
+    margin: 80px auto;
+    animation: skew 3s infinite alternate;
+}
+
+@keyframes skew {
+    0% {
+        transform: skew(-30deg, -30deg);
+    }
+    100% {
+        transform: skew(30deg, 20deg);
+    }
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-div {
+    position: relative;
+    height: 100px;
+}
+
+.image-div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+    
+}
+
+.image-div .hover-img {
+    opacity: 0;
+}
+
+.image-div:hover .default-img {
+    opacity: 0;
+}
+
+.image-div:hover .hover-img {
+    opacity: 1;
+}
+
+.square {
+    background-color: crimson;
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    margin: 100px auto;
+    transition: all 0.5s ease;
+}
+
+.square:hover {
+    background-color: cyan;
+    transform: rotate(30deg);
+}
+
+.button-div{
+    text-align: center;
+}
+
+.button {
+    color: rgb(210, 56, 224);
+    background-color: aquamarine;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.button:hover {
+    background-color: rgb(210, 56, 224);
+    color: aquamarine;
+    transform: scale(1.5);
+}
+
+.loading {
+    background-color: green;
+    animation: stretch 5s infinite alternate;
+    width: 80vw;
+}
+
+@keyframes stretch {
+    0% {
+        width: 100px; 
+    }
+    100% {
+        width: 80vw; 
+    }
+}
+
+.bounce {
+    text-align: center;
+    font-size: 50px;
+    margin: 50px auto;
+    animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
