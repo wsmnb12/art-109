@@ -9,7 +9,7 @@ let rotationY = 0;
 
 function preload() {
   // Load OBJ file here (duh)
-  model3D = loadModel("./assets/model.obj", true);
+  model3D = loadModel("./assets/StupidRat.obj", true);
 }
 
 function setup() {
