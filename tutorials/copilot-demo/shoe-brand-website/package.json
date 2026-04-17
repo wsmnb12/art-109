@@ -1,0 +1,22 @@
+{
+  "name": "shoe-brand-website",
+  "version": "1.0.0",
+  "description": "A modern minimalistic website for a shoe brand showcasing shoes available for purchase.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build process can be added here.'"
+  },
+  "keywords": [
+    "shoes",
+    "ecommerce",
+    "minimalistic",
+    "responsive"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
