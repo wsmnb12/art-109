@@ -1,0 +1,20 @@
+{
+  "name": "sockets_codingrainbow",
+  "version": "1.0.0",
+  "description": "sockets example code ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "sockets",
+    "p5.js",
+    "node"
+  ],
+  "author": "Ryan Nikopour",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
