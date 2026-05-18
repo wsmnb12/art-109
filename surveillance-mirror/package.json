@@ -1,7 +1,7 @@
 {
   "name": "surveillance-mirror",
   "version": "5.0.0",
-  "description": "Phase 5 of The Surveillance Mirror net art project: canvas behavior traces plus an opt-in local webcam attention proxy.",
+  "description": "The Surveillance Mirror net art project",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

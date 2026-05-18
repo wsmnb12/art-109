@@ -72,4 +72,4 @@ if (missing.length) {
   process.exit(1);
 }
 
-console.log('Static integration check passed: Phase 5 webcam attention layer is wired into HTML, CSS, and JS.');
+console.log('Static integration check passed: Webcam attention layer is wired into HTML, CSS, and JS.');

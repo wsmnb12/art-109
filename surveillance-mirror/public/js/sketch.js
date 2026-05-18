@@ -1,14 +1,4 @@
-// The Surveillance Mirror — Phase 5
-// Visual behavior-trace and opt-in webcam attention layer for an interactive net art prototype.
-// No names, emails, faces, video frames, or real identities are sent to the server.
 
-/*
-  Phase 5 builds on Phase 4 by adding an opt-in webcam attention layer.
-  The browser requests camera permission only after the user clicks Enable Camera.
-  When the native FaceDetector API is available, the piece uses local face presence
-  and screen-facing position as a rough attention proxy. It does not identify people,
-  store images, or transmit video frames.
-*/
 
 document.addEventListener('DOMContentLoaded', () => {
   const elements = {
@@ -901,7 +891,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     safeSet(elements.profileSeed, `Profile Seed: ${Math.floor(Math.random() * 9000 + 1000)}-C`);
     addLog('Calibration started. Ordinary behavior will now be interpreted.');
-    addLog('Phase 5 trace renderer active. Movement and optional camera attention will leave visible residue.', 'profile');
+    addLog('Trace renderer active. Movement and camera attention will leave visible residue.', 'profile');
     updateMirrorMessage('CALIBRATION ACTIVE', 'Move, click, pause, scroll, type, or enable the webcam. The system will overread everything.');
     updateProfile();
   }

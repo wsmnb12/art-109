@@ -374,7 +374,6 @@ h1 {
   }
 }
 
-/* Phase 2 additions: live behavior tracking interface */
 .status-dot-active {
   background: var(--line-strong);
   box-shadow: 0 0 18px var(--line-strong);
@@ -545,7 +544,6 @@ h1 {
   }
 }
 
-/* Phase 3 profiling engine additions */
 .classification-card {
   border: 1px solid rgba(139, 255, 220, 0.18);
   background: linear-gradient(135deg, rgba(139, 255, 220, 0.08), rgba(255, 77, 109, 0.055));
@@ -586,7 +584,6 @@ h1 {
   background: rgba(139, 255, 220, 0.055) !important;
 }
 
-/* Phase 4 visual behavior-trace layer */
 :root {
   --accent: rgba(139, 255, 220, 0.78);
 }
@@ -678,7 +675,6 @@ h1 {
   }
 }
 
-/* Phase 5 optional webcam attention layer */
 .webcam-card {
   margin-top: 16px;
   border: 1px solid rgba(139, 255, 220, 0.22);
