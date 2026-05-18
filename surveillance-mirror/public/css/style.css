@@ -1,3 +1,5 @@
+/* Root custom properties define the color palette and visual tokens
+   used throughout the surveillance mirror layout and effects. */
 :root {
   --bg: #050708;
   --panel: rgba(10, 18, 20, 0.78);
@@ -11,6 +13,7 @@
   --shadow: rgba(139, 255, 220, 0.18);
 }
 
+/* Use border-box sizing to make width and height calculations predictable. */
 * {
   box-sizing: border-box;
 }
@@ -36,6 +39,8 @@ textarea {
   font: inherit;
 }
 
+/* Overlay layers create the retro surveillance aesthetic with scanlines
+   and subtle moving noise on top of the interface. */
 .scanline-layer,
 .noise-layer {
   pointer-events: none;
@@ -72,6 +77,8 @@ textarea {
   100% { transform: translate3d(0, 0, 0); }
 }
 
+/* The page shell centers the content and constrains the maximum width.
+   Common panel visuals are shared by top bar, footer, summary panels and mirror. */
 .page-shell {
   position: relative;
   z-index: 1;
@@ -207,6 +214,8 @@ h1 {
   text-align: right;
 }
 
+/* The mirror stage is the central visual canvas for the surveillance feature.
+   It holds the animated grid overlay and the content panel. */
 .mirror-stage {
   position: relative;
   display: grid;
@@ -218,6 +227,8 @@ h1 {
     linear-gradient(180deg, rgba(4, 14, 15, 0.94), rgba(0, 0, 0, 0.86));
 }
 
+/* A subtle grid effect that fades toward the edges, reinforcing the
+   futuristic monitoring display style. */
 .grid-overlay {
   position: absolute;
   inset: 0;
@@ -340,6 +351,8 @@ h1 {
   margin: 0;
 }
 
+/* Responsive layout adjustments for medium and small screens.
+   The UI stacks vertically and reduces height requirements for mobile. */
 @media (max-width: 1040px) {
   .interface-grid {
     grid-template-columns: 1fr;
@@ -544,6 +557,8 @@ h1 {
   }
 }
 
+/* Classification cards show the current attention or face analysis
+   results with a layered, translucent UI style. */
 .classification-card {
   border: 1px solid rgba(139, 255, 220, 0.18);
   background: linear-gradient(135deg, rgba(139, 255, 220, 0.08), rgba(255, 77, 109, 0.055));

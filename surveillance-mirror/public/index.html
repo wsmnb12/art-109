@@ -8,9 +8,11 @@
   <script defer src="js/sketch.js"></script>
 </head>
 <body>
+  <!-- Retro overlay effects that sit above the page content but below the main dashboard. -->
   <div class="scanline-layer" aria-hidden="true"></div>
   <div class="noise-layer" aria-hidden="true"></div>
 
+  <!-- Root content container for the surveillance mirror dashboard. -->
   <main class="page-shell">
     <header class="top-bar">
       <div>
@@ -23,6 +25,7 @@
       </div>
     </header>
 
+    <!-- Three-column grid: profile metrics, mirror display, and system log. -->
     <section class="interface-grid" aria-label="Surveillance dashboard interface">
       <aside class="panel profile-panel">
         <div class="panel-header">
@@ -53,6 +56,7 @@
         </div>
       </aside>
 
+      <!-- Central mirror display area where behavior traces and attention overlays appear. -->
       <section class="mirror-stage" id="mirror-stage" aria-label="Main mirror display">
         <div class="corner top-left"></div>
         <div class="corner top-right"></div>
@@ -68,6 +72,7 @@
           <div><span>Heat Drift</span><strong id="heat-drift-value">Dormant</strong></div>
         </div>
         <div class="coordinate-readout" id="coordinate-readout">x: --- / y: ---</div>
+        <!-- Mirror content panel shows status, messages, and calibration controls. -->
         <div class="mirror-content" id="mirror-content">
           <p class="system-code" id="system-code">SYS/MIRROR/</p>
           <h2 id="mirror-title">INITIALIZING REFLECTION</h2>
@@ -78,6 +83,7 @@
         </div>
       </section>
 
+      <!-- Activity log and optional webcam attention interface. -->
       <aside class="panel log-panel">
         <div class="panel-header">
           <h2>System Log</h2>
@@ -104,6 +110,7 @@
             <div><span>Attention</span><strong id="webcam-attention-state-value">Unmeasured</strong></div>
             <div><span>Signal</span><strong id="webcam-signal-value">No visual stream</strong></div>
           </div>
+          <!-- Webcam explanation text is intentionally reassuring and artful. -->
           <p class="webcam-note">Runs locally in your browser. No video is sent to the server. (Totally not selling it)</p>
         </div>
         <ol class="log-list" id="log-list" aria-live="polite">
@@ -131,6 +138,7 @@
       </label>
     </section>
 
+    <!-- Low-priority footer note reinforces the surveillance theme. -->
     <footer class="footer-note">
       <p>We're always watching.</p>
       <p id="phase-note">Your movement becomes our data.</p>

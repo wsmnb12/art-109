@@ -1,5 +1,7 @@
 
 
+/* Main application entry point. Wait until the DOM is ready before
+   selecting page elements, initializing state, and wiring event handlers. */
 document.addEventListener('DOMContentLoaded', () => {
   const elements = {
     statusPill: document.querySelector('#status-pill'),
@@ -43,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
     awayTimeValue: document.querySelector('#away-time-value')
   };
 
+  /* Runtime state object holds every current user interaction metric,
+     visualization buffer, attention timing values, and webcam/tracking flags. */
   const state = {
     startedAt: Date.now(),
     mouseMoves: 0,
@@ -85,6 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
     currentClassification: 'Awaiting Behavior'
   };
 
+  /* Message pools provide the text that appears in the log and
+     mirror status messages when different interaction categories fire. */
   const messagePools = {
     movement: [
       'Cursor movement detected.',
@@ -164,6 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
   };
 
+  /* Classification rules generate a pseudo-profile label based on the
+     accumulated interaction signals and camera attention metrics. */
   const classificationRules = [
     {
       label: 'The Hesitant Subject',
@@ -242,6 +250,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const canvasContext = elements.behaviorCanvas?.getContext('2d') || null;
 
+  /* Resize the drawing canvas to match the mirror stage size and device
+     pixel ratio, so the rendering stays crisp and aligned with the UI container. */
   function resizeBehaviorCanvas() {
     if (!elements.behaviorCanvas || !elements.mirrorStage || !canvasContext) return;
     const rect = elements.mirrorStage.getBoundingClientRect();
@@ -253,6 +263,8 @@ document.addEventListener('DOMContentLoaded', () => {
     canvasContext.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
   }
 
+  /* Convert viewport mouse coordinates into local mirror-stage coordinates.
+     This ensures visual traces and heat blooms appear in the correct area. */
   function localPointFromViewport(x, y) {
     if (!elements.mirrorStage) return null;
     const rect = elements.mirrorStage.getBoundingClientRect();
@@ -336,6 +348,9 @@ document.addEventListener('DOMContentLoaded', () => {
     canvasContext.restore();
   }
 
+  /* Render the dynamic behavior overlay on the canvas each frame.
+     This includes grid interference, scan sweep, heat blooms, trace lines,
+     click ripples, and idle rings. */
   function drawBehaviorLayer() {
     if (!canvasContext || !elements.behaviorCanvas || !elements.mirrorStage) return;
     const rect = elements.mirrorStage.getBoundingClientRect();
@@ -432,6 +447,8 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(drawBehaviorLayer);
   }
 
+  /* Utility helpers for safely updating DOM text and formatting elapsed time.
+     These keep other functions concise and resilient to missing elements. */
   function safeSet(element, value) {
     if (element) element.textContent = value;
   }
@@ -832,6 +849,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  /* Request webcam access, start local video playback, and initialize
+     face detection if available. The webcam layer is optional and intentionally
+     keeps all video locally in the browser. */
   async function enableWebcamAttention() {
     if (!navigator.mediaDevices?.getUserMedia) {
       safeSet(elements.webcamStatusValue, 'Unsupported Browser');
